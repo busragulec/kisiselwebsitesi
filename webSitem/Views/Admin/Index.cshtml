@@ -1,0 +1,30 @@
+﻿@using webSitem.Models.sinif
+@model List<AnaSayfa>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Ana Sayfa</h2>
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Id</th>
+        <th>İsim</th>
+        <th>Resim</th>
+        <th>Ünvan</th>
+        <th>Reklam</th>
+        <th>Güncelle</th>
+
+    </tr>
+    @foreach (var x in Model) //SQL'den çeker(admincontrollera listelemen gerek)
+    {
+<tr>
+    <td>@x.id</td>
+    <td>@x.isim</td>
+    <td>@x.resim1</td>
+    <td>@x.unvan</td>
+    <td>@x.reklam1</td>
+    <td><a href="/Admin/AnaSayfaGetir/@x.id" class="btn btn-primary">Güncelle</a></td>
+</tr>
+    }
+
+</table>

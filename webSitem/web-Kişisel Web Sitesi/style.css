@@ -1,0 +1,376 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url(resimler/arkaplan.jpg);
+    background-size: cover;
+}
+
+#sayfa{
+    width: 900px;  /* genişlik */
+    min-height: 925px; /* uzunluk*/
+    border-style:  double;  /* çizgi tipi*/    
+    margin: auto; /* sayfa ortası */
+    border-width: 7px; /* çizgi kalınlığı */
+    background-color:	#fffacdc4	 ;
+}
+
+/* Yan Menü*/
+#yanmenu{
+    width: 300px;
+    min-height: 915px;
+    border-style:  solid;     
+}
+
+/* Ust */
+#ust{
+    width: 300px;
+    min-height: 280px;
+    border-style:  none; 
+}
+
+/* Orta */
+#orta{
+    width: 300px;
+    min-height: 470px;
+    border-style: none;   
+}
+
+/* Alt */
+#alt{
+    width: 300px;
+    min-height: 30px;
+    border-style: none;   
+}
+
+#kare {
+    width: 195px;
+    height: 195px;
+    margin-top: 40%;
+    margin-left: 16%;
+    border-style: double;
+    background-color: rgb(1, 36, 21);
+    border-radius: 60%;
+    z-index: 100;
+}
+
+
+
+
+
+#box {
+    padding: 2px;
+    text-align: center;
+    margin: auto;
+    margin-top: -23%;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 99;
+}
+
+    #box img {
+        border-radius: 60%;
+        width: 180px;
+        height: 180px;
+        transition: 0.5s;
+        cursor: pointer;
+        position: relative;
+        margin-top: 2%;
+       
+    }
+
+#box img:hover{
+    transform: scale(0.9);
+
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+#box li{
+    display: inline-block;
+    margin: 15px;
+    list-style: none;
+}
+
+    #box li a {
+        color: rgb(1, 36, 21);
+        font-size: 30px;
+        transition: all ease-in-out 250ms;
+    }
+
+#box li a:hover{
+    color: #2F4F4F	;
+}
+
+/* Ana Menü*/
+#anamenu{
+    position: absolute;
+    top: 0;
+    right: 510px;
+    width: 598px;
+    min-height: 915px;  
+}
+
+#box1 {
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20%;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+} 
+
+#box1 img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#box1 img:hover{
+    transform: scale(0.9);
+}
+
+
+#box1 li{  
+    margin: 50px;
+    list-style: none;
+}
+
+    #box1 li a {
+        color: rgb(1, 36, 21);
+        font-size: 30px;
+        transition: all ease-in-out 250ms;
+    }
+
+#box1 li a:hover{
+    color: #2F4F4F	;
+}
+
+
+#box2 {
+    margin-top: 35%;
+    color: rgb(1, 36, 21);
+}
+
+.metin {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: rgb(1, 36, 21);
+    margin-top: 15%;
+    position: relative;
+    left: 33%;
+}
+
+.unvan {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: rgb(1, 36, 21);
+    margin-top: 5%;
+    position: relative;
+    left: 19%;
+}
+
+.iletisim {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: rgb(1, 36, 21);
+    margin-top: 5%;
+    position: relative;
+    left: 30%;
+}
+
+
+
+.yil {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(1, 36, 21);
+    margin-top: -20px;
+    position: relative;
+    left: 44%;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+
+
+#kutu {
+    width: 400px;
+    min-height: 260px;
+    background-color: rgb(1, 36, 21);
+    border-style: double;
+    border-color: #FFFACD;
+    border-width: 7px;
+    margin: auto;
+    margin-top: 60%;
+}
+
+#ilet{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #FFFACD;
+    position: relative;
+    left: 5%;
+    margin: auto;
+    margin-top: 16%;
+    letter-spacing: 2px;
+}
+
+.baslik{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #FFFACD;
+    position: relative;
+    left: 25%; 
+} 
+
+.baslik1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #FFFACD;
+    position: relative;
+    left: 28%;    
+} 
+
+.baslik2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #FFFACD;
+    position: relative;
+    left: 20%; 
+}
+#kutu1 {
+    width: 500px;
+    min-height: 260px;
+    background-color: rgb(1, 7, 5);
+    border-style: double;
+    border-color: #FFFACD;
+    border-width: 7px;
+    margin: auto;
+    margin-top: 60%;
+}
+
+.ilet1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #FFFACD;
+    position: relative;
+    left: -2%;
+    margin:auto;
+    margin-top: 7%;
+}
+
+
+#galeri {
+    margin-top: 10%;
+    margin-left: 25%;
+    width: 300px;
+    min-height: 470px;
+}
+
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {
+    display: none; border-radius:70px;
+}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 300px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 150000s;
+  animation-name: fade;
+  animation-duration: 150000s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 1} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 1} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

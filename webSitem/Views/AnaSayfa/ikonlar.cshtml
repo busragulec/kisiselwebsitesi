@@ -1,0 +1,12 @@
+﻿@using webSitem.Models.sinif
+@model List<ikons>
+
+<div id="alt">
+    <ul id="box">
+        @foreach (var x in Model)
+        {
+            <li><a href="@x.link"><i class="@x.ikon"></i></a></li>
+        }
+
+    </ul>
+</div>

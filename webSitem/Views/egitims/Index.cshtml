@@ -1,0 +1,47 @@
+﻿@model IEnumerable<webSitem.Models.sinif.egitim>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitim</h2>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Başlık</th>
+        <th>İlkokul</th>
+        <th>Ortaokul</th>
+        <th>Lise</th>
+        <th>Üniversite</th>
+        <th>Bölüm</th>
+        <th>Güncelle</th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.baslik)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ilkokul)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ortaokul)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.lise)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.uni)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.bolum)
+    </td>
+
+
+    <td><a href="/egitims/Edit/@item.id" class="btn btn-primary">Güncelle</a></td>
+</tr>
+}
+
+</table>

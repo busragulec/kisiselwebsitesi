@@ -1,0 +1,47 @@
+﻿@model IEnumerable<webSitem.Models.sinif.iletisim>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İletişim</h2>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Başlık</th>
+        <th>Telefon</th>
+        <th>Mail</th>
+        <th>Harita</th>
+        <th>Güncelle</th>
+
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.baslik)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.telefon)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.mail)
+    </td>
+    <td>
+        @if (item.harita.Length > 60)
+        {
+            string newstring = item.harita.Remove(60,item.harita.Length - 60);
+            @Html.DisplayFor(modelItem => newstring);
+        }
+        else
+        {
+            @Html.DisplayFor(modelItem => item.harita);
+        }
+    </td>
+    <td><a href="/iletisims1/Edit/@item.id" class="btn btn-primary">Güncelle</a></td>
+
+</tr>
+}
+
+</table>

@@ -1,0 +1,72 @@
+﻿@model webSitem.Models.sinif.AnaSayfa
+@{
+    ViewBag.Title = "AnaSayfaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Ana Sayfa Güncelle</h2>
+<hr />
+@using (Html.BeginForm("AnaSayfaGüncelle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+
+    @Html.LabelFor(x => x.id)
+    @Html.TextBoxFor(x => x.id, new { @class = "form-control", @readonly = "readonly" }) //id'yi çekti
+    <br />
+    @Html.LabelFor(x => x.isim)
+    @Html.TextBoxFor(x => x.isim, new { @class = "form-control" })//isim'i çekti
+    <br />
+    @Html.LabelFor(x => x.profil)
+    @Html.TextBoxFor(x => x.profil, new { @class = "form-control" })
+    <input type="file" name="profil" accept=".png,.jpg" />
+    <br />
+    <br />
+    @Html.LabelFor(x => x.resim1)
+
+    @Html.TextBoxFor(x => x.resim1, new { @class = "form-control" })
+    <input type="file" name="resim1" accept=".png,.jpg" />
+    <br />
+    <br />
+    @Html.LabelFor(x => x.resim2)
+    @Html.TextBoxFor(x => x.resim2, new { @class = "form-control" })
+    <input type="file" name="resim2" accept=".png,.jpg" />
+    <br />
+    <br />
+    @Html.LabelFor(x => x.resim3)
+    @Html.TextBoxFor(x => x.resim3, new { @class = "form-control" })
+    <input type="file" name="resim3" accept=".png,.jpg" />
+    <br />
+    <br />
+    @Html.LabelFor(x => x.aciklama)
+    @Html.TextAreaFor(x => x.aciklama, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.unvan)
+    @Html.TextBoxFor(x => x.unvan, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.iletisim)
+    @Html.TextBoxFor(x => x.iletisim, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.reklam1)
+    @Html.TextBoxFor(x => x.reklam1, new { @class = "form-control" })
+    <input type="file" name="reklam1" accept=".png,.jpg" />
+    <br />
+    <br />
+    @Html.LabelFor(x => x.reklamlink1)
+    @Html.TextBoxFor(x => x.reklamlink1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.reklam2)
+    @Html.TextBoxFor(x => x.reklam2, new { @class = "form-control" })
+    <input type="file" name="reklam2" accept=".png,.jpg" />
+    <br />
+    <br />
+    @Html.LabelFor(x => x.reklamlink2)
+    @Html.TextBoxFor(x => x.reklamlink2, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success"> Ana Sayfa Güncelle</button>
+    <td><a href="/Admin/Index" class="btn btn-danger">Geri Dön</a></td>
+   
+}
+
+
+

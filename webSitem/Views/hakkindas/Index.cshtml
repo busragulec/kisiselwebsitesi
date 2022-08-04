@@ -1,0 +1,32 @@
+﻿@model IEnumerable<webSitem.Models.sinif.hakkinda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hakkında</h2>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Başlık</th>
+        <th>Metin</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.baslik)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.metin)
+    </td>
+    <td><a href="/hakkindas/Edit/@item.id" class="btn btn-primary">Güncelle</a></td>
+
+</tr>
+    }
+
+</table>
+

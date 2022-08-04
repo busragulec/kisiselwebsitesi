@@ -1,0 +1,37 @@
+﻿@model webSitem.Models.sinif.hakkinda
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<h2>Hakkında Düzenle</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <br />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id)
+
+        @Html.LabelFor(x => x.baslik)
+        @Html.TextBoxFor(x => x.baslik, new { @class = "form-control" })
+        <br />
+
+        @Html.LabelFor(x => x.metin)
+        @Html.TextAreaFor(x => x.metin, new { @class = "form-control" })
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+                <td><a href="/hakkindas/Index" class="btn btn-danger">Geri Dön</a></td>
+            </div>
+        </div>
+    </div>
+}
+
+

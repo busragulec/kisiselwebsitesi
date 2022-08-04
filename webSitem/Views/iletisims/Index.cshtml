@@ -1,0 +1,35 @@
+﻿@model IEnumerable<webSitem.Models.sinif.AnaSayfa>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>İletişim Bilgileri</h2>
+<br />
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Başlık</th>
+        <th>Telefon</th>
+        <th>Mail</th>
+        <th>Güncelle</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mail)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.id }, new {@class="btn btn-primary" }) 
+        </td>
+    </tr>
+}
+
+</table>

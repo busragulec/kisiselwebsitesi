@@ -1,0 +1,173 @@
+﻿@using webSitem.Models.sinif
+@model List<hakkinda>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Büşra GÜLEÇ</title>
+    <meta name="description" content="Büşra GÜLEÇ">
+    <meta name="keywords" content="busra , gulec , html , css , plc ">
+    <link rel="stylesheet" href="~/web-Kişisel Web Sitesi/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+
+
+        #sayfa {
+            width: 900px; /* genişlik */
+            min-height: 937px; /* uzunluk*/
+            border-style: double; /* çizgi tipi*/
+            margin: auto; /* sayfa ortası */
+            border-width: 7px; /* çizgi kalınlığı */
+            background-color: #fffacdc4;
+        }
+
+        /* Yan Menü*/
+        #yanmenu {
+            width: 300px;
+            min-height: 923px;
+            border-style: solid;
+        }
+
+        /* Ust */
+        #ust {
+            width: 300px;
+            min-height: 280px;
+            border-style: none;
+        }
+
+        /* Orta */
+        #orta {
+            width: 300px;
+            min-height: 470px;
+            border-style: none;
+        }
+
+        #anamenu {
+            position: absolute;
+            top: 0;
+            right: 510px;
+            width: 598px;
+            min-height: 915px;
+            cursor:default;
+        }
+
+        .kutu1 {
+            width: 510px;
+            min-height: 290px;
+            background-color: rgb(1, 7, 5);
+            border-style: double;
+            border-color: #FFFACD;
+            border-width: 7px;
+            margin: auto;
+            margin-top: 40%;
+        }
+
+
+        .ilet {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: #FFFACD;
+            position: relative;
+            left: -5%;
+            margin: auto;
+            margin-top: 10%;
+            letter-spacing: 2px;
+        }
+
+        .ilet1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: #FFFACD;
+            position: relative;
+            left: 7%;
+            margin: auto;
+            margin-top: 10%;
+        }
+
+        .baslik2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+            color: #FFFACD;
+            position: relative;
+            left: 33%;
+        }
+
+        #box1 {
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+        }
+
+            #box1 img {
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+
+                #box1 img:hover {
+                    transform: scale(0.9);
+                }
+
+
+            #box1 li {
+                margin: 50px;
+                list-style: none;
+            }
+
+                #box1 li a {
+                    color: rgb(1, 36, 21);
+                    font-size: 30px;
+                    transition: all ease-in-out 250ms;
+                }
+
+                    #box1 li a:hover {
+                        color: #2F4F4F;
+                    }
+    </style>
+</head>
+
+<body>
+    <div id="sayfa" class="opak">
+        <header id="yanmenu">
+            <div id="ust">
+            </div>
+            <div id="orta">
+                <ul id="box1">
+                    <li><a href="/AnaSayfa/Index"><i class="fas fa-home"> Anasayfa</i></a></li>
+                    <li><a href="/Hakkinda/Index"><i class="fas fa-user"> Hakkında</i></a></li>
+                    <li><a href="/Egitim/Index"><i class="fas fa-university"> Eğitim</i></a></li>
+                    <li><a href="/iletisim/Index"><i class="fas fa-tty"> İletişim</i></a></li>
+                </ul>
+            </div>
+        </header>
+        <nav id="anamenu">
+            <div class="kutu1">
+                <ul class="ilet">
+                    @foreach (var x in Model)
+                    {
+                        <i class="baslik2">@x.baslik</i>
+                        <P class="ilet1">
+                            @x.metin
+                        </P>
+                        <br />
+                        <br />
+                        <br />
+                    }
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script src="https://kit.fontawesome.com/19b391057b.js" crossorigin="anonymous"></script>
+</body>
+</html>
